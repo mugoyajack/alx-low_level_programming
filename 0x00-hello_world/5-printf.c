@@ -1,10 +1,10 @@
 #include<stdio.h>
-/*
- *main- execution begins here
- * using printf to output to stdio
- */
+/**
+* main - print strings with printf
+* Return: zero
+*/
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art, ");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
