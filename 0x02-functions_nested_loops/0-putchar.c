@@ -5,6 +5,15 @@
  */
 int main(void)
 {
-	-putchar("_putchar\n");
+	char c[] = "_putchar";
+	int i;
+
+	for (i = 0; c[i] != 00 ; i++)
+	{
+		_putchar (c[i]);
+	}
+
+	_putchar('\n');
+
 	return (0);
 }
