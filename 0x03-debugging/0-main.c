@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-	int t;
+	int i;
 
-	t = 0;
-	positive_or_negative(t);
+	i = 0;
+	positive_or_negative(i);
 	return (0);
 }
