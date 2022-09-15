@@ -7,7 +7,7 @@ int main(void)
 {
 	int t;
 
-	t = 98;
+	t = 0;
 	positive_or_negative(t);
 	return (0);
 }
