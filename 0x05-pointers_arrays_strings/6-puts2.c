@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts2 - print characters of a string
+ * puts2 - prints characters at even position in a string
  * @str: string to print
  */
 void puts2(char *str)
@@ -9,7 +9,10 @@ void puts2(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i]);
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
 	}
 	_putchar('\n');
 }
