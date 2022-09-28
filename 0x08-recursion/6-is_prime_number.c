@@ -29,5 +29,5 @@ int prime(int n, int d)
 		{
 		return (0);
 		}
-	return (actual_prime(n, d - 1));
+	return (prime(n, d - 1));
 }
