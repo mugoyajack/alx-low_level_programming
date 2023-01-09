@@ -6,20 +6,12 @@
  */
 print_binary(unsigned long int n)
 {
-	int i, j = 0;
-	unsigned long int num;
-
-	for (i = 63; i >= 0; i--)
+	if (n >> 0)
 	{
-		num = n >> i;
-		if (num & 1)
-		{
-			_putchar('1');
-			j++;
-		}
-		else if (j)
-			_putchar('o');
+		if (n >> 1)
+			print_binary(n >> 1);
+		_putchar((n & 1) + '0');
 	}
-	if (!j)
+	else
 		_putchar('0');
 }
