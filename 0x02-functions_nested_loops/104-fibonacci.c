@@ -17,11 +17,11 @@ int main(void)
 		temp = curr;
 		if (i < 98)
 		{
-			printf("%li, ", curr);
+			printf("%lu, ", curr);
 		}
 		else
 		{
-			printf("%li\n", curr);
+			printf("%lu\n", curr);
 		}
 	}
 	return (0);
