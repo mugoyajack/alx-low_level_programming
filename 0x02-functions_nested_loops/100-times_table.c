@@ -1,28 +1,76 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - Print first 98 fibonacci numbers
- * Return: 0
+ * print_table - print multplication table
+ * @k: num to print
+ * Return; void
  */
-int main(void)
+void print_table(int k)
 {
-	unsigned long int prev, curr, i, temp;
-
-	temp = 1;
-	prev = 0;
-	curr = 0;
-	for (i = 1; i <= 99; i++)
+	if (k <= 9)
 	{
-		curr = temp + prev;
-		prev = temp;
-		temp = curr;
-		if (i < 99)
+		_putchar(44);
+		_putchar(32);
+		_putchar(32);
+		_putchar(32);
+		_putchar(k + '0');
+	}
+	else if (k >= 10 && k <= 99)
+	{
+		_putchar(44);
+		_putchar(32);
+		_putchar(32);
+		_putchar(k / 10 + '0');
+		_putchar(k % 10 + '0');
+	}
+	else if (k >= 100 && k <= 226)
+	{
+		_putchar(44);
+		_putchar(32);
+		_putchar((k / 100) + '0');
+		_putchar(((k - 100) / 10) + '0');
+		_putchar(k % 10 + '0');
+	}
+}
+
+/**
+ * print_times_table - print multiplication table of n*n
+ * @n: multiple of
+ * Return: void
+ */
+void print_times_table(int n)
+{
+	if (n > -1 && n <= 15)
+	{
+		int i = 0, j, k;
+
+		while (i <= n)
 		{
-			printf("%lu, ", curr);
-		}
-		else
-		{
-			printf("%lu\n", curr);
+			j = 0;
+			while (j <= n)
+			{
+				k = i * j;
+
+				if (j == 0)
+				{
+					_putchar(k + '0');
+				}
+				else if (k <= 9)
+				{
+					print_table(k);
+				}
+				else if (k >= 10 && k <= 99)
+				{
+					print_table(k);
+				}
+				else if (k >= 100 && k <= 226)
+				{
+					print_table(k);
+				}
+
+				j++;
+			}
+			_putchar(10);
+			i++;
 		}
 	}
-	return (0);
 }
