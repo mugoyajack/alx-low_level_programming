@@ -10,12 +10,12 @@ int main(void)
 	temp = 1;
 	prev = 0;
 	curr = 0;
-	for (i = 1; i <= 98; i++)
+	for (i = 1; i <= 99; i++)
 	{
 		curr = temp + prev;
 		prev = temp;
 		temp = curr;
-		if (i < 98)
+		if (i < 99)
 		{
 			printf("%lu, ", curr);
 		}
